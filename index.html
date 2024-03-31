@@ -615,11 +615,12 @@ body {
 
   <!-- contact section -->
 
-  
-         <section id="contact" class="contact_section layout_padding">
+  <section id="contact" class="contact_section layout_padding">
     
   <body>
     
+ 
+
     <div class="card">
     
           
@@ -715,25 +716,27 @@ body {
                           انضم الينا 
                         </h2>
                       </div>
-                      <form action="https://formsubmit.co/elsukari@hiworkma.online">
-                        <div>
-                          <input type="text" placeholder="الاسم الكامل" />
+                      <form id="myform">
+                        <span>الاسم الكامل</span>
+                        <div class="inputbox">
+                            <input type="text" value="" id="username" required>
+                            
                         </div>
-                        <div>
-                          <input type="email" placeholder="البريد الالكترونى " />
+                        <span>البريدالالكتروني</span>
+                        <div class="inputbox">
+                            <input type="email" value="" id="email" required>
+                            
                         </div>
-                        <div>
-                          <input type="text" placeholder="رقم الهاتف" />
+                        <span>مواصفات العمل الذي تبحث عنه</span>
+                        <div class="inputbox">
+                            <input type="text" value="" id="phone" required>
+                            
                         </div>
-                        <div>
-                          <input type="text" class="message-box" placeholder="ما هي المهارات التي تمتلكها" />
-                        </div>
-                        <div class="d-flex ">
-                          <button>
-                            معالجة الطلب
-                          </button>
-                        </div>
-                      </form>
+                        <div class="inputbox">
+                          
+                      </div>
+                        <input type="submit" value="انضم" class="sub" id="submit">
+                    </form>
                     </div>
                   </div>
                 
@@ -743,8 +746,59 @@ body {
               </div>
             </div>
           </div>
+
+          <script type="module">
+
+            // Import the functions you need from the SDKs you need
+      
+         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+         import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+      
+      // Your web app's Firebase configuration
+         const firebaseConfig = {
+           apiKey: "AIzaSyApyn2L7MvBsF3tJBQEeRoKw9qAasD3UbA",
+           authDomain: "hiwork-8a204.firebaseapp.com",
+             projectId: "hiwork-8a204",
+             storageBucket: "hiwork-8a204.appspot.com",
+             messagingSenderId: "278840744974",
+             appId: "1:278840744974:web:654f22269678b8c977705f",
+             measurementId: "G-1HFJVP9RE3"
+         };
+      
+      // Initialize Firebase
+         const app = initializeApp(firebaseConfig);
+      
+      //get ref to database services
+          const db = getDatabase(app);
+      
+          document.getElementById("submit").addEventListener('click', function(e){
+          e.preventDefault() ;
+           set(ref(db, 'user/' + document.getElementById("username").value),
+           {
+      
+             
+             lastname: document.getElementById("username").value,
+             email: document.getElementById("email").value,
+      
+             PhoneNumber: document.getElementById("phone").value,
+            
+             
+           });
+             alert("  حسابك قيد المعالجة ، شكرا لتسجيلك!");
+          })
+          
+          
+          document.forms['myform'].reset()
+
+          
+      </script>
+      
+      
+
+      
             </section>
   </body>
+  
   
 
   <!-- end contact section -->
