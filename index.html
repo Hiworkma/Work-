@@ -35,6 +35,147 @@
 
 <body>
 
+
+  <style>
+
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300);
+
+* {
+  margin:0;
+  padding:0;
+  outline:none;
+  list-style:none;
+  text-decoration:none;
+  box-sizing:border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;  
+}
+
+body {
+  background: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  margin:0 auto;
+  width: 400px;
+  height: 100px;
+  position: relative;
+  top:50%;left:50%;
+  margin-left:-200px;
+  margin-top:-50px;
+}
+
+.wrapper a {
+  position: relative;
+  background: #7335b7;
+  bottom: 0;
+  color: #fff;
+  height: 45px;
+  line-height: 45px;
+  position: absolute;
+  width: 100%;
+  padding: 0 0 0 20px;
+  font-size: 12px;
+  font-weight:700;
+  font-family: 'Arial';
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  transition:0.1s all ease-in;
+}
+.wrapper a span{
+  display: block;
+  width: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 10px;
+  height: 10px;
+  position: absolute;
+}
+
+.wrapper a span span{
+  background: url(http://thomaspodgro.com/source/arrow.png);
+  display: block;
+  width: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0px;
+  height: 10px;
+  opacity: 1;
+  position: absolute;
+}
+
+.wrapper a .arrow:before {
+  content:"";
+  background: url(http://thomaspodgro.com/source/arrow.png);
+  display: block;
+  width: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 10px;
+  height: 10px;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.wrapper a .arrow:after {
+  content:"";
+  background: url(http://thomaspodgro.com/source/arrow.png);
+  display: block;
+  width: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 20px;
+  height: 10px;
+  position: fixed;
+  opacity: 0.3;
+  bottom: 20px;
+  right: 20px;
+}
+
+.wrapper a:hover .arrow:before{
+  animation: animate-arrow-2 1s ease-in-out infinite 0.1s;
+}
+
+.wrapper a:hover .arrow:after{
+  animation: animate-arrow-3 1s ease-in-out infinite 0.2s;
+}
+
+.wrapper a:hover .arrow span{
+  animation: animate-arrow-1 1s ease-in-out infinite;
+}
+
+@keyframes animate-arrow-1 {
+  0%{transform:translateX(-40px);opacity: 0;}
+  70%,100%{transform:translateX(0px);opacity: 1;}
+}
+@keyframes animate-arrow-2 {
+  0%{transform:translateX(-20px);opacity: 0;}
+  70%,100%{transform:translateX(0px);opacity: 0.5;}
+}
+@keyframes animate-arrow-3 {
+  0%{transform:translateX(-10px);opacity: 0;}
+  70%,100%{transform:translateX(0px);opacity: 0.3;}
+}
+</style>
+
+<div id="section1">
+
+
+  <div class="wrapper">
+    <a href="#contact"> <p style="text-align: center;">انضم الينا الان</p> <span class="arrow"><span></span></span></a>
+  </div>
+
+  
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
@@ -474,42 +615,137 @@
 
   <!-- contact section -->
 
-  <section class="contact_section layout_padding">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-5 col-lg-4 offset-md-1">
-          <div class="form_container">
-            <div class="heading_container">
-              <h2>
-                انضم الينا 
-              </h2>
-            </div>
-            <form action="https://formsubmit.co/elsukari@hiworkma.online" method="POST">
-              
-              <div>
-                <input type="text" placeholder="الاسم الكامل" />
-              </div>
-              <div>
-                <input type="email" placeholder="البريد الالكترونى " />
-              </div>
-              <div>
-                <input type="text" placeholder="رقم الهاتف" />
-              </div>
-              <div>
-                <input type="text" class="message-box" placeholder="ما هي المهارات التي تمتلكها" />
-              </div>
-              <div class="d-flex ">
-                <button>
-                  معالجة الطلب
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-        
+  
+         <section id="contact" class="contact_section layout_padding">
+    
+  <body>
+    
+    <div class="card">
+    
+          
+      <div class="imgBx">
+      
+     
+      
       </div>
-    </div>
-  </section>
+      
+      <div class="details">
+      
+        <style>
+
+          
+        
+        .card
+        
+        {
+        
+        position: relative;
+        
+        width: 300px;
+        
+        height: 600px;
+        
+        background: #0000;
+        
+        display: flex;
+        align-items:center;
+        
+        box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+        
+        overflow: hidden;
+        
+        transition: 0.5s ease-in-out;
+        
+        }
+        
+        .card:hover
+        
+        {
+        
+        width: 600px;
+        
+        }
+        
+        .card .imgBx
+        
+        {
+        
+        position: relative;
+        
+        min-width: 90px;}
+
+        .form_container {
+
+          height: 517px;
+        
+          width: 200px;
+
+          
+        
+          
+          
+          transition: 0.5s ease-in-out;
+          transition: 0,5 ease-out;
+
+
+        }
+
+        .form_container:hover {
+          width: 400px;
+        
+        }
+
+        .card .details
+        
+        {
+          width: 400px;
+          transition: 0.5s ease-in-out;
+          transition: 0,5 ease-out;
+        }
+        
+        </style>
+        
+          
+              <div class="container-fluid">
+                
+                  <div class="col-md-5 col-lg-4 offset-md-1">
+                    <div class="form_container">
+                      <div class="heading_container">
+                        <h2>
+                          انضم الينا 
+                        </h2>
+                      </div>
+                      <form action="https://formsubmit.co/elsukari@hiworkma.online">
+                        <div>
+                          <input type="text" placeholder="الاسم الكامل" />
+                        </div>
+                        <div>
+                          <input type="email" placeholder="البريد الالكترونى " />
+                        </div>
+                        <div>
+                          <input type="text" placeholder="رقم الهاتف" />
+                        </div>
+                        <div>
+                          <input type="text" class="message-box" placeholder="ما هي المهارات التي تمتلكها" />
+                        </div>
+                        <div class="d-flex ">
+                          <button>
+                            معالجة الطلب
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+            </section>
+  </body>
+  
 
   <!-- end contact section -->
 
